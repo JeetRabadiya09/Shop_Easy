@@ -21,6 +21,7 @@ class _SignInState extends State<SignIn> {
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [],
         ),
       ),
