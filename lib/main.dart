@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/screen/sign_in.dart';
+
+import 'view/Home/sign_in.dart';
 
 void main() {
   runApp(const MyApp());
