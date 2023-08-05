@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Home/sign_up.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -52,12 +53,12 @@ class _SignInState extends State<SignIn> {
                     isDense: true,
                     labelText: "E-mail",
                     hintText: "Enter email ",
-                    contentPadding: EdgeInsets.all(12),
+                    contentPadding: const EdgeInsets.all(12),
                     hintStyle: const TextStyle(
                         color: Color(0xFFB3B3B3),
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        fontFamily: "sf-pro-display-cufonfonts"),
+                        fontFamily: "Poppins"),
                   ),
                   onTap: () {},
                 ),
@@ -67,7 +68,7 @@ class _SignInState extends State<SignIn> {
                 TextFormField(
                   validator: (value) {
                     if (!RegExp(r"^[a-zA-Z0-9]{6}$").hasMatch(value!)) {
-                      return "Enter email id ";
+                      return "Enter Passcode";
                     }
                     return null;
                   },
@@ -81,14 +82,17 @@ class _SignInState extends State<SignIn> {
                     isDense: true,
                     labelText: "Passcode",
                     hintText: "Enter passcode ",
-                    contentPadding: EdgeInsets.all(12),
+                    contentPadding: const EdgeInsets.all(12),
                     hintStyle: const TextStyle(
                         color: Color(0xFFB3B3B3),
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        fontFamily: "sf-pro-display-cufonfonts"),
+                        fontFamily: "Poppins"),
                   ),
                   onTap: () {},
+                ),
+                SizedBox(
+                  height: screenHeight / 40,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -97,32 +101,75 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Login_Success(),
+                          builder: (context) => const SignUp(),
                         ),
                       );
                     } else {
                       debugPrint("is not valid");
                     }
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Container(
-                      height: 48,
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1D951A),
-                        borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    height: screenHeight / 15,
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFA500),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      "Log In",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFFFFFFFF),
                       ),
-                      child: const Text(
-                        "CREATE",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: "sf-pro-display-cufonfonts",
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: screenHeight / 40,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    if (formkey.currentState!.validate()) {
+                      debugPrint("is valid");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUp(),
                         ),
-                      ),
+                      );
+                    } else {
+                      debugPrint("is not valid");
+                    }
+                  },
+                  child: Container(
+                    height: screenHeight / 15,
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset("assets/images/google.png",
+                            width: screenWidth / 10, height: screenHeight / 10),
+                        SizedBox(
+                          width: screenWidth / 50,
+                        ),
+                        const Text(
+                          "Log In with Google",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF1E1E1E),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
