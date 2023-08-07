@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/view/Home/sign_up.dart';
+import 'package:shop_easy/view/Log_in/sign_up.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -172,6 +172,45 @@ class _SignInState extends State<SignIn> {
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: screenHeight / 50,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUp(),
+                      ),
+                    );
+                  },
+                  child: RichText(
+                    text: const TextSpan(
+                      // style: TextStyle(color: Color(0xFF7C7C7C), fontSize: 18),
+                      children: [
+                        TextSpan(
+                            text: 'A new member?',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF1E1E1E),
+                              fontFamily: "Poppins",
+                            )),
+                        TextSpan(
+                            text: 'Sign Up',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Color(0xFFCD7300),
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Poppins",
+                            )),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: screenHeight / 20,
                 ),
               ],
             ),
