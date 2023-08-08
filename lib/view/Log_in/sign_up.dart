@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/res/constant/app_assets.dart';
+import 'package:shop_easy/res/constant/app_colors.dart';
+import 'package:shop_easy/res/constant/app_strings.dart';
 import 'package:shop_easy/view/Log_in/sign_in.dart';
 
 class SignUp extends StatefulWidget {
@@ -24,7 +27,7 @@ class _SignUpState extends State<SignUp> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage("assets/images/Sign In.png"),
+            image: AssetImage(AppAssets.imagesignin),
           ),
         ),
         child: Form(
@@ -51,7 +54,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                     // contentPadding: const EdgeInsets.all(00),
                     isDense: true,
-                    labelText: "E-mail",
+                    labelText: AppStrings.email,
                     hintText: "Enter email ",
                     contentPadding: const EdgeInsets.all(12),
                     hintStyle: const TextStyle(
@@ -80,7 +83,7 @@ class _SignUpState extends State<SignUp> {
                     ),
                     // contentPadding: const EdgeInsets.all(00),
                     isDense: true,
-                    labelText: "Passcode",
+                    labelText: AppStrings.passcode,
                     hintText: "Enter passcode ",
                     contentPadding: const EdgeInsets.all(12),
                     hintStyle: const TextStyle(
@@ -99,16 +102,16 @@ class _SignUpState extends State<SignUp> {
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFA500),
+                    color: AppColors.orange,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Text(
-                    "Sign Up",
+                    AppStrings.signup,
                     style: TextStyle(
                       fontSize: 14,
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFFFFFFFF),
+                      color: AppColors.white,
                     ),
                   ),
                 ),
@@ -120,24 +123,24 @@ class _SignUpState extends State<SignUp> {
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFFFFF),
+                    color: AppColors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("assets/images/google.png",
+                      Image.asset(AppAssets.imagegoogle,
                           width: screenWidth / 10, height: screenHeight / 10),
                       SizedBox(
                         width: screenWidth / 50,
                       ),
                       const Text(
-                        "Sign Up with Google",
+                        AppStrings.signupgoogle,
                         style: TextStyle(
                           fontSize: 14,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF1E1E1E),
+                          color: AppColors.black,
                         ),
                       ),
                     ],
@@ -160,18 +163,18 @@ class _SignUpState extends State<SignUp> {
                       // style: TextStyle(color: Color(0xFF7C7C7C), fontSize: 18),
                       children: [
                         TextSpan(
-                            text: 'Already a member?',
+                            text: AppStrings.richsignone,
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
-                              color: Color(0xFF1E1E1E),
+                              color: AppColors.black,
                               fontFamily: "Poppins",
                             )),
                         TextSpan(
-                            text: 'Log In',
+                            text: AppStrings.richsigntwo,
                             style: TextStyle(
                               fontSize: 13,
-                              color: Color(0xFFCD7300),
+                              color: AppColors.orangetwo,
                               fontWeight: FontWeight.w500,
                               fontFamily: "Poppins",
                             )),
