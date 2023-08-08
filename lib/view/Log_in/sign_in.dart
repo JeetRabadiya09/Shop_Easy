@@ -4,6 +4,7 @@ import 'package:shop_easy/res/constant/app_strings.dart';
 import 'package:shop_easy/view/Log_in/sign_up.dart';
 
 import '../../res/constant/app_colors.dart';
+import 'confirm_email.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -105,7 +106,7 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignUp(),
+                          builder: (context) => const ConfirmEmail(),
                         ),
                       );
                     } else {
@@ -141,7 +142,7 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignUp(),
+                          builder: (context) => const ConfirmEmail(),
                         ),
                       );
                     } else {

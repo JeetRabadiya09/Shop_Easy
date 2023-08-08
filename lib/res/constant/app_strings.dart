@@ -10,4 +10,8 @@ class AppStrings {
   static const String signupgoogle = "Sign Up with Google";
   static const String richsignone = "Already a member?";
   static const String richsigntwo = "Log In";
+  static const String confirmemail = "Confirm Email";
+  static const String confirmemail1 = "A link has been sent to";
+  static const String confirmemail2 = "dolores.chambers@example.com.";
+  static const String confirmemail3 = "Click on the link to verify your email";
 }

@@ -10,8 +10,7 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  // ignore: non_constant_identifier_names
-  Navigate() {
+  navigate() {
     Future.delayed(const Duration(seconds: 10), () {
       Navigator.pushAndRemoveUntil(
           context,
@@ -25,6 +24,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   void initState() {
     // TODO: implement initState
+    navigate();
     super.initState();
   }
 

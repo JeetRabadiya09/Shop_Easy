@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/res/constant/app_assets.dart';
+import 'package:shop_easy/res/constant/app_colors.dart';
+import 'package:shop_easy/res/constant/app_strings.dart';
 
 class ConfirmEmail extends StatefulWidget {
   const ConfirmEmail({Key? key}) : super(key: key);
@@ -10,9 +13,90 @@ class ConfirmEmail extends StatefulWidget {
 class _ConfirmEmailState extends State<ConfirmEmail> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double screenHeight = size.height;
+    double screenWidth = size.width;
+    EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return Scaffold(
-      body: Column(
-        children: [],
+      body: Padding(
+        padding: EdgeInsets.all(screenWidth / 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              AppStrings.confirmemail,
+              style: TextStyle(
+                  color: AppColors.black,
+                  fontFamily: "Poppins",
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: screenHeight / 20,
+            ),
+            Center(
+              child: Image.asset(
+                AppAssets.imageemail,
+                height: screenHeight / 3,
+                width: screenWidth / 1.5,
+              ),
+            ),
+            SizedBox(
+              height: screenHeight / 30,
+            ),
+            const Text(
+              AppStrings.confirmemail1,
+              style: TextStyle(
+                  color: AppColors.black,
+                  fontFamily: "Poppins",
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400),
+            ),
+            const Text(
+              AppStrings.confirmemail2,
+              style: TextStyle(
+                  color: AppColors.black,
+                  fontFamily: "Poppins",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600),
+            ),
+            const Text(
+              AppStrings.confirmemail3,
+              style: TextStyle(
+                  color: AppColors.black,
+                  fontFamily: "Poppins",
+                  fontSize: 13,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: screenHeight / 40,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => `,), (route) => false)
+              },
+              child: Container(
+                height: screenHeight / 17,
+                width: double.infinity,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.orange,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Text(
+                  "Continue",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
