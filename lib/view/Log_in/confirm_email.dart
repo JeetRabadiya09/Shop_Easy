@@ -3,6 +3,8 @@ import 'package:shop_easy/res/constant/app_assets.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
 import 'package:shop_easy/res/constant/app_strings.dart';
 
+import '../Home/mainhomescreen.dart';
+
 class ConfirmEmail extends StatefulWidget {
   const ConfirmEmail({Key? key}) : super(key: key);
 
@@ -74,7 +76,12 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => `,), (route) => false)
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MainHomeScreen(),
+                    ),
+                    (route) => false);
               },
               child: Container(
                 height: screenHeight / 17,
@@ -94,6 +101,17 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: screenHeight / 40,
+            ),
+            const Text(
+              "Resend Email",
+              style: TextStyle(
+                  color: AppColors.orangetwo,
+                  fontFamily: "Poppins",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500),
             ),
           ],
         ),
