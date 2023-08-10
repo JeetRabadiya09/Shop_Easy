@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_easy/res/constant/app_colors.dart';
 
 import '../Homepage/cartscreen.dart';
 import '../Homepage/favstoresscreen.dart';
@@ -27,38 +25,39 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenList[currentIndex],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: currentIndex,
-        onDestinationSelected: (int index) {
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
           setState(() {
-            currentIndex = index;
+            currentIndex = value;
           });
         },
-        backgroundColor: Color(0xFFFFFFFF),
-        labelBehavior: ,
-        destinations: const [
-          NavigationDestination(
-
-            selectedIcon: Icon(Icons.home_outlined, color: AppColors.orange),
+        currentIndex: currentIndex,
+        // selectedColorOpacity: 01,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        unselectedItemColor: const Color(0xFF6F6F6F),
+        selectedItemColor: Colors.orange,
+        items: const [
+          BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home_outlined, color: Colors.orange),
             label: 'Home',
           ),
-          NavigationDestination(
-            selectedIcon: Icon(CupertinoIcons.tickets, color: AppColors.orange),
-            icon: Icon(CupertinoIcons.tickets),
-            label: 'Book',
-
+          BottomNavigationBarItem(
+            icon: Icon(Icons.storefront_outlined),
+            activeIcon: Icon(Icons.storefront_outlined, color: Colors.orange),
+            label: 'Fav Stores',
           ),
-          NavigationDestination(
-            selectedIcon:
-                Icon(Icons.bookmark_border_outlined, color: AppColors.orange),
-            icon: Icon(Icons.bookmark_border_outlined),
-            label: 'Saved',
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart_outlined),
+            activeIcon:
+                Icon(Icons.shopping_cart_outlined, color: Colors.orange),
+            label: 'Cart',
           ),
-          NavigationDestination(
-            selectedIcon:
-                Icon(Icons.person_outline_sharp, color: AppColors.orange),
+          BottomNavigationBarItem(
             icon: Icon(Icons.person_outline_sharp),
+            activeIcon: Icon(Icons.person_outline_sharp, color: Colors.orange),
             label: 'Profile',
           ),
         ],
