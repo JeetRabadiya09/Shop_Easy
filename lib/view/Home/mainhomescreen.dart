@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Cartpage/cartscreen.dart';
+import 'package:shop_easy/view/Favstorepage/favstoresscreen.dart';
+import 'package:shop_easy/view/Profilepage/profile.dart';
 
-import '../Homepage/cartscreen.dart';
-import '../Homepage/favstoresscreen.dart';
 import '../Homepage/homescreen.dart';
-import '../Homepage/profile.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({Key? key}) : super(key: key);
