@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
-import 'package:shop_easy/view/Homepage/homescreen.dart';
+import 'package:shop_easy/view/Home/mainhomescreen.dart';
 import 'package:shop_easy/view/Homepage/section.dart';
 
 class CategoriesScreen extends StatefulWidget {
@@ -81,7 +81,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (context) => const MainHomeScreen(),
                 ));
           },
         ),
