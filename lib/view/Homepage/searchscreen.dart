@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Homepage/searchsecondscreen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -43,13 +44,23 @@ class _SearchScreenState extends State<SearchScreen> {
         padding: EdgeInsets.all(screenWidth / 15),
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: screenHeight / 20,
-              decoration: BoxDecoration(
-                border: Border.all(color: const Color(0xFFD3D3D3), width: 1),
-                color: const Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(110),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SearchSecondScreen(),
+                  ),
+                );
+              },
+              child: Container(
+                width: double.infinity,
+                height: screenHeight / 20,
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color(0xFFD3D3D3), width: 1),
+                  color: const Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(110),
+                ),
               ),
             ),
             SizedBox(
