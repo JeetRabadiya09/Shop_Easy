@@ -366,7 +366,7 @@ class _SearchThirdScreenState extends State<SearchThirdScreen> {
       ),
     ];
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           actions: [
@@ -377,7 +377,7 @@ class _SearchThirdScreenState extends State<SearchThirdScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FilterScreen(),
+                      builder: (context) => const FilterScreen(),
                     ),
                   );
                 },
