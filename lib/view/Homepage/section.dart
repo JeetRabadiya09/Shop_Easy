@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
-import 'package:shop_easy/view/Homepage/categories.dart';
 
 class SectionScreen extends StatefulWidget {
   const SectionScreen({super.key});
@@ -107,15 +106,15 @@ class _SectionScreenState extends State<SectionScreen> {
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const CategoriesScreen(),
-                ));
-          },
-        ),
+        // leading: BackButton(
+        //   onPressed: () {
+        //     Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => const CategoriesScreen(),
+        //         ));
+        //   },
+        // ),
         centerTitle: true,
         title: const Text(
           "Shoes",

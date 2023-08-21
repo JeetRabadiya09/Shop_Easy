@@ -99,8 +99,15 @@ class _SignInState extends State<SignIn> {
                 SizedBox(
                   height: screenHeight / 40,
                 ),
-                GestureDetector(
-                  onTap: () {
+                ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6))),
+                      fixedSize: MaterialStatePropertyAll(
+                          Size(screenWidth / 1, screenHeight / 18)),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(AppColors.orange)),
+                  onPressed: () {
                     if (formkey.currentState!.validate()) {
                       debugPrint("is valid");
                       Navigator.push(
@@ -113,25 +120,49 @@ class _SignInState extends State<SignIn> {
                       debugPrint("is not valid");
                     }
                   },
-                  child: Container(
-                    height: screenHeight / 15,
-                    width: double.infinity,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: AppColors.orange,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Text(
-                      AppStrings.login,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.white,
-                      ),
+                  child: const Text(
+                    AppStrings.login,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.white,
                     ),
                   ),
                 ),
+                // GestureDetector(
+                //   onTap: () {
+                //     if (formkey.currentState!.validate()) {
+                //       debugPrint("is valid");
+                //       Navigator.push(
+                //         context,
+                //         MaterialPageRoute(
+                //           builder: (context) => const ConfirmEmail(),
+                //         ),
+                //       );
+                //     } else {
+                //       debugPrint("is not valid");
+                //     }
+                //   },
+                //   child: Container(
+                //     height: screenHeight / 15,
+                //     width: double.infinity,
+                //     alignment: Alignment.center,
+                //     decoration: BoxDecoration(
+                //       color: AppColors.orange,
+                //       borderRadius: BorderRadius.circular(10),
+                //     ),
+                //     child: const Text(
+                //       AppStrings.login,
+                //       style: TextStyle(
+                //         fontSize: 14,
+                //         fontFamily: "Poppins",
+                //         fontWeight: FontWeight.w500,
+                //         color: AppColors.white,
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 SizedBox(
                   height: screenHeight / 40,
                 ),

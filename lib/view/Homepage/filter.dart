@@ -283,12 +283,39 @@ class _FilterScreenState extends State<FilterScreen> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: screenHeight / 35,
+                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                      style: const ButtonStyle(shape: ,
+                      style: ButtonStyle(
+                        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                            side: const BorderSide(
+                                color: AppColors.orange, width: 2))),
+                        fixedSize: MaterialStatePropertyAll(
+                            Size(screenWidth / 2.7, screenHeight / 18)),
+                      ),
+                      onPressed: () {},
+                      child: const Text("Reset",
+                          style: TextStyle(
+                              color: AppColors.orange,
+                              fontWeight: FontWeight.w600)),
+                    ),
+                    // SizedBox(
+                    //   width: screenWidth / 20,
+                    // ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                          shape: MaterialStatePropertyAll(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(6))),
+                          fixedSize: MaterialStatePropertyAll(
+                              Size(screenWidth / 2.7, screenHeight / 18)),
                           backgroundColor:
-                              MaterialStatePropertyAll(AppColors.orange)),
+                              const MaterialStatePropertyAll(AppColors.orange)),
                       onPressed: () {},
                       child: const Text("Apply",
                           style: TextStyle(

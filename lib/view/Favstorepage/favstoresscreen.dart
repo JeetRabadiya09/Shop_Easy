@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Favstorepage/store_profile.dart';
 
 class FavStoreScreen extends StatefulWidget {
   const FavStoreScreen({Key? key}) : super(key: key);
@@ -118,12 +119,12 @@ class _FavStoreScreenState extends State<FavStoreScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => SignIn(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const StoreProfile(),
+                      ),
+                    );
                   },
                   child: GridView.builder(
                     physics: const NeverScrollableScrollPhysics(),

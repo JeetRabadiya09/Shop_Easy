@@ -74,8 +74,15 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
             SizedBox(
               height: screenHeight / 40,
             ),
-            GestureDetector(
-              onTap: () {
+            ElevatedButton(
+              style: ButtonStyle(
+                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6))),
+                  fixedSize: MaterialStatePropertyAll(
+                      Size(screenWidth / 1, screenHeight / 18)),
+                  backgroundColor:
+                      const MaterialStatePropertyAll(AppColors.orange)),
+              onPressed: () {
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
@@ -83,25 +90,44 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                     ),
                     (route) => false);
               },
-              child: Container(
-                height: screenHeight / 17,
-                width: double.infinity,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: AppColors.orange,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Text(
-                  "Continue",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontFamily: "Poppins",
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.white,
-                  ),
+              child: const Text(
+                "Continue",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: "Poppins",
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.white,
                 ),
               ),
             ),
+            // GestureDetector(
+            //   onTap: () {
+            //     Navigator.pushAndRemoveUntil(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => MainHomeScreen(),
+            //         ),
+            //         (route) => false);
+            //   },
+            //   child: Container(
+            //     height: screenHeight / 17,
+            //     width: double.infinity,
+            //     alignment: Alignment.center,
+            //     decoration: BoxDecoration(
+            //       color: AppColors.orange,
+            //       borderRadius: BorderRadius.circular(10),
+            //     ),
+            //     child: const Text(
+            //       "Continue",
+            //       style: TextStyle(
+            //         fontSize: 14,
+            //         fontFamily: "Poppins",
+            //         fontWeight: FontWeight.w500,
+            //         color: AppColors.white,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             SizedBox(
               height: screenHeight / 40,
             ),
