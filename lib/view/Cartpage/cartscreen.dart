@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Cartpage/checkoutscreen.dart';
 import 'package:shop_easy/view/Cartpage/product_detail.dart';
 
 import '../../res/constant/app_colors.dart';
@@ -91,7 +92,14 @@ class _CartScreenState extends State<CartScreen> {
                           Size(screenWidth / 1, screenHeight / 18)),
                       backgroundColor:
                           const MaterialStatePropertyAll(AppColors.orange)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CheckoutScreen(),
+                      ),
+                    );
+                  },
                   child: const Text("Checkout",
                       style: TextStyle(
                           color: AppColors.white, fontWeight: FontWeight.w600)),
