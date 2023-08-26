@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_easy/view/Homepage/successpage.dart';
 
 import '../../res/constant/app_colors.dart';
 
@@ -184,7 +185,14 @@ class _CheckoutSecondScreenState extends State<CheckoutSecondScreen> {
                       Size(screenWidth / 1, screenHeight / 18)),
                   backgroundColor:
                       const MaterialStatePropertyAll(AppColors.orange)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SuccessScreen(),
+                    ),
+                    (route) => false);
+              },
               child: const Text("Confirm Purchase",
                   style: TextStyle(
                       color: AppColors.white, fontWeight: FontWeight.w600)),
