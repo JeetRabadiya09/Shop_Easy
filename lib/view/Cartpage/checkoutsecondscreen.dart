@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/view/Homepage/successpage.dart';
+import 'package:shop_easy/view/Cartpage/payment_details.dart';
+import 'package:shop_easy/view/Cartpage/successpage.dart';
 
 import '../../res/constant/app_colors.dart';
 
@@ -44,7 +45,13 @@ class _CheckoutSecondScreenState extends State<CheckoutSecondScreen> {
               height: screenHeight / 20,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PaymentDetailScreen(),
+                    ));
+              },
               child: Image.asset(
                 "assets/images4/card.png",
                 height: screenHeight / 4,
@@ -169,7 +176,13 @@ class _CheckoutSecondScreenState extends State<CheckoutSecondScreen> {
                       Size(screenWidth / 1, screenHeight / 18)),
                   backgroundColor:
                       const MaterialStatePropertyAll(Color(0xFF9B4100))),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PaymentDetailScreen(),
+                    ));
+              },
               child: const Text("Change Card",
                   style: TextStyle(
                       color: AppColors.white, fontWeight: FontWeight.w600)),
