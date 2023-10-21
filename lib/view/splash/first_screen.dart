@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/res/constant/app_assets.dart';
 import 'package:shop_easy/view/Log_in/sign_in.dart';
+
+import '../../res/constant/constant.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);

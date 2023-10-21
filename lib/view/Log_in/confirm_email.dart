@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/res/constant/app_assets.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
 import 'package:shop_easy/res/constant/app_strings.dart';
 
+import '../../res/constant/constant.dart';
 import '../Home/mainhomescreen.dart';
 
 class ConfirmEmail extends StatefulWidget {

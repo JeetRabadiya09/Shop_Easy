@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/res/constant/app_assets.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
 import 'package:shop_easy/res/constant/app_strings.dart';
 import 'package:shop_easy/view/Log_in/sign_in.dart';
+
+import '../../res/constant/constant.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);

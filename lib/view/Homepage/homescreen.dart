@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop_easy/res/constant/app_assets.dart';
 import 'package:shop_easy/res/constant/app_colors.dart';
 import 'package:shop_easy/view/Homepage/categories.dart';
 import 'package:shop_easy/view/Homepage/searchscreen.dart';
+
+import '../../res/constant/constant.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
